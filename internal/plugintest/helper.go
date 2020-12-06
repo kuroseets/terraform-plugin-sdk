@@ -87,10 +87,10 @@ func InitHelper(config *Config) (*Helper, error) {
 // left behind in the filesystem after the tests complete.
 func (h *Helper) Close() error {
 	if h.execTempDir != "" {
-		err := os.RemoveAll(h.execTempDir)
-		if err != nil {
-			return err
-		}
+		//err := os.RemoveAll(h.execTempDir)
+		//if err != nil {
+			//return err
+		//}
 	}
 	return os.RemoveAll(h.baseDir)
 }
